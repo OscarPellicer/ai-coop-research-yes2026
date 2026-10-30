@@ -15,15 +15,15 @@ Oscar José Pellicer Valero · Universitat de València · Oscar.Pellicer@uv.es
 
 ## Hands-on prompts
 
-**1 · Can you trust its references?** Ask a chatbot (ideally without web search):
+**1 · Is the AI's literature map your map?** Ask an assistant with web search on:
 
 ```text
-Give me the 5 most influential academic papers on [the counter-cyclical behaviour of
+What are the 5 most important academic papers on [the counter-cyclical behaviour of
 worker cooperatives | member participation in housing cooperatives | the performance of
-agricultural cooperatives]. Include authors, year, journal and DOI.
+agricultural cooperatives]? Give full references with DOI and a one-paragraph synthesis.
 ```
 
-Check each one in Google Scholar or `https://doi.org/<DOI>`.
+Check: do they exist, are they the ones you would choose, what is missing, and does the synthesis describe a paper you know well correctly?
 
 **2A · Econometrics.** Upload `coops_panel.csv` and ask:
 

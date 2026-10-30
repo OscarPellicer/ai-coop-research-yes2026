@@ -11,13 +11,13 @@ html: true
 
 ## Before using an AI tool
 
-- ☐ **What data am I giving it?** 🟢 public / my own non-sensitive text / code → any tool · 🟡 pseudonymised transcripts, unpublished work → enterprise/institutional tool with a DPA, if the DPO agrees · 🔴 raw audio, identifiable or special-category data (union membership, politics, health), others' manuscripts, student work with names → local tools only, or no AI
-- ☐ **Which plan am I on?** Consumer plans (free *and* paid personal) may train on your data → check the settings. Business/Enterprise/Edu/API: no training by default.
+- ☐ **What data am I giving it?** *Green*: public data, your own text, code → any tool. *Amber*: personal data (pseudonymised or not), unpublished work → only a Team/Enterprise/API plan with a DPA, with a legal basis, an Art. 9 exception for special categories, informed participants and your DPO's approval. *Red*: personal data in a free or personal plan, others' manuscripts under review → never; use a local tool.
+- ☐ **Which plan am I on?** Free and personal plans (Pro, Plus) follow consumer terms and may train on your data. Team/Business/Enterprise/API: no training by default and a DPA. Researchers: apply for the **Claude Team plan for scientists**.
 - ☐ **Does my consent form / ethics approval cover it?** If not, don't, and fix it for the next study.
 
 ## While using it
 
-- ☐ Literature: start from tools grounded in real papers (Semantic Scholar, Elicit, Consensus, Scite, NotebookLM). **Open every paper you cite.**
+- ☐ Literature: let the agent search and map the field, then **read every paper you cite**. Look for what it misses (non-English journals, reports).
 - ☐ Code: work on a copy or in **git**; ask for a plan first; **review every change**; re-run from scratch. Make sure you can explain every line.
 - ☐ Qualitative: AI as a *second reader* with **your** codebook; check that quotes are verbatim; record tool, version and prompts.
 - ☐ Agents (Claude Code, Codex): keep personal data **out** of the folder; read commands before approving them; write rules in `CLAUDE.md` / `AGENTS.md`.
@@ -25,7 +25,7 @@ html: true
 
 ## Before submitting
 
-- ☐ Every reference exists and its DOI resolves; details are correct
+- ☐ Every cited paper read; every DOI resolves
 - ☐ Every number in the text is traceable to a script output
 - ☐ The replication package runs from scratch
 - ☐ **AI-use statement** written following **this journal's current** policy
