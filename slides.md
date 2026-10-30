@@ -38,22 +38,32 @@ section.title h3 { color: #8a1257; margin-top: 4px; }
 .price s { font-size: 0.45em; opacity: 0.7; font-weight: 400; }
 </style>
 
-<!-- _class: no-footer title -->
+<!-- _class: no-footer divider -->
 
-![bg right:36%](imgs/valencia.jpg)
+![bg brightness:0.35](imgs/valencia.jpg)
 
-![w:640px](logos/congress_all.png)
+<style scoped>
+section.divider { justify-content: flex-start; padding-top: 130px; }
+section.divider h1 { font-size: 60px; line-height: 1.15; margin-top: 20px; }
+p, em, code, strong { color: white !important; }
+code { background: rgba(255,255,255,0.15); }
+.logos { position: absolute; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; background: white; padding: 16px 70px; }
+.logos img { height: 46px; }
+.meta { padding-left: 40px; }
+</style>
+
+<div class="logos"><img src="logos/congress_all.png"><img src="logos/uv_isp.png"></div>
 
 # Using AI in research, publishing and teaching
-### …without getting burned
 
-**Oscar José Pellicer Valero**
-`Oscar.Pellicer@uv.es`
+<div class="meta">
+
+**Oscar José Pellicer Valero** · `Oscar.Pellicer@uv.es`
 Image & Signal Processing group (ISP) · Universitat de València
 
-![w:380px](logos/uv_isp.png)
+*YES Workshop · ICA CCR Europe 2026 · Valencia, 3 November 2026*
 
-*YES Workshop · ICA CCR Europe 2026 · Valencia, 3 Nov 2026*
+</div>
 
 <!--
 Timing plan (60'): Intro 5 · Tools 10 · Research + HO1/HO2 18 · Agents & my tools 7 · Publishing 6 · Data protection + HO3 8 · Teaching 3 · Wrap-up 3.
@@ -68,12 +78,13 @@ Timing plan (60'): Intro 5 · Tools 10 · Research + HO1/HO2 18 · Agents & my t
 <div class="columns">
 <div>
 
-**Get ready (30 s)**
+**Get ready**
 1. Open an AI assistant on your laptop or phone (Claude, ChatGPT, Gemini…)
 2. Scan the QR to get the materials
-3. Sit next to someone: we will compare results
 
-**Three short hands-on blocks** (about 5 min each)
+<br>
+
+**Three short hands-on blocks** (~5 min each)
 
 <span class="num">1</span> Is the AI's literature map your map?
 <span class="num">2</span> Econometrics **or** qualitative coding
@@ -85,19 +96,19 @@ Timing plan (60'): Intro 5 · Tools 10 · Research + HO1/HO2 18 · Agents & my t
 ![w:300px](imgs/qr_materials.png)
 
 **Slides, data, interview, prompts, checklist**
-`github.com/OscarPellicer/ai-coop-research-yes2026`
+[`github.com/OscarPellicer/ai-coop-research-yes2026`](github.com/OscarPellicer/ai-coop-research-yes2026)
 
 </div>
 </div>
 
 ---
 
-## Quick show of hands
+## Quick questions
 
 Who has, **in the last month**, used a generative AI tool to…
 
 1. …search or summarise literature?
-2. …write or debug **code** (R, Stata, Python)?
+2. …write or debug **code**?
 3. …polish the **English** of a paper?
 4. …analyse **interview transcripts** or survey answers?
 5. …prepare **teaching** materials?
@@ -138,7 +149,7 @@ Expected: many hands for 1-3, few for 6-7. The talk is about that gap.
 - They find real papers, open them and quote them. Invented references are now rare.
 - They write, run and debug code for a full analysis.
 
-**The risks that remain**
+**Risks that remain**
 - You **stop reading** what you cite and sign
 - Everyone's literature review looks the same: highly cited, English-language papers
 - **Personal and confidential data** leaves your hands
@@ -177,8 +188,8 @@ Expected: many hands for 1-3, few for 6-7. The talk is about that gap.
 
 | | Anthropic | OpenAI | Google |
 |:--|:--|:--|:--|
-| **Top model** | Claude Opus 5.5 · Fable 5.1 | GPT-6 Astra | Gemini 4 Argon |
-| **Agent** | **Claude Code** (and Cowork) | **Codex** | Antigravity |
+| **Top model** | Claude Opus 5.5 · Fable 5.1 | GPT-6 Astra | Gemini 4 Argon / Carbon |
+| **Agent** | **Claude Code** (and Cowork) | **Codex** | **Antigravity** |
 | **Where** | VS Code extension · desktop app · terminal | VS Code extension · desktop app · terminal | Own app (VS Code-based) · terminal |
 | **Cheapest access** | Pro (~20 €/month) · **free seat with the plan for scientists** | Free with daily limit · Plus for GPT-6 Astra | Free with Gemini 3.8 Flash · AI Pro/Ultra for Argon |
 | **Data contract (DPA), no training** | Team / Enterprise / API | Business / Enterprise / API | Workspace Business / Vertex AI |
@@ -957,13 +968,13 @@ code { background: rgba(255,255,255,0.15); }
 
 ![](imgs/qr_materials.png)
 
-`github.com/OscarPellicer/ai-coop-research-yes2026`
-
 </div>
+
+[`github.com/OscarPellicer/ai-coop-research-yes2026`](github.com/OscarPellicer/ai-coop-research-yes2026)
 
 ---
 
-<!-- _class: smallest -->
+<!-- _class: small -->
 
 ## References
 
@@ -983,7 +994,7 @@ code { background: rgba(255,255,255,0.15); }
 
 ---
 
-<!-- _class: smallest -->
+<!-- _class: smalle -->
 
 ## Image credits
 
