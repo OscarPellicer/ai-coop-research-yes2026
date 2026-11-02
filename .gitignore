@@ -1,2 +1,34 @@
 email_participants.md
 .DS_Store
+
+# coop-project/: publish only the original materials. Everything else is a
+# solution generated in the demos (CLAUDE.md, code/, output/, paper/, notes/,
+# papers/md/, proposal LaTeX/PDF, interview coding, reviews, case study...).
+coop-project/*
+!coop-project/data/
+!coop-project/papers/
+!coop-project/interviews/
+!coop-project/proposal/
+coop-project/data/*
+!coop-project/data/README.md
+!coop-project/data/coops_panel.csv
+coop-project/papers/*
+!coop-project/papers/README.md
+!coop-project/papers/*.pdf
+coop-project/interviews/*
+!coop-project/interviews/interview_excerpt.md
+coop-project/proposal/*
+!coop-project/proposal/README.md
+!coop-project/proposal/idea.md
+!coop-project/proposal/template.docx
+
+# Anywhere: local agent settings, Python and LaTeX by-products
+.claude/settings.local.json
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+*.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
