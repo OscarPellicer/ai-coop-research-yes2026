@@ -5,6 +5,11 @@ paginate: false
 html: true
 ---
 
+<style>
+ul { list-style: none; padding-left: 0.4em; }
+li { text-indent: -1.1em; padding-left: 1.1em; }
+</style>
+
 # AI in research: a one-page checklist
 
 *ICA CCR Europe 2026 · YES Workshop · O. J. Pellicer Valero (Universitat de València)*

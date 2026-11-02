@@ -6,29 +6,24 @@ html: true
 footer: ICA CCR Europe 2026 · YES Workshop
 ---
 
-<!-- Logos: ICA CCR (left) + UV/ISP (right) -->
+<!-- Logos: ICA CCR, CEGEA, UPV, UV/ISP -->
 <style>
 section::before {
-  background: url("logos/ica_ccr.png") left center/contain no-repeat,
-              url("logos/uv_isp.png") right center/contain no-repeat;
-  width: 700px;
-  height: 34px;
-  bottom: 6px;
+  background: url("logos/footer_strip.png") right center/contain no-repeat;
+  width: 820px;
+  height: 30px;
+  bottom: 8px;
 }
 footer { font-size: 14px; }
 .hands-on { border-left: 8px solid #8a1257; padding-left: 20px; }
+.live { border-left: 8px solid #2a7f62; padding-left: 20px; }
 section.divider { background: linear-gradient(135deg, #8a1257 0%, #3b1a5c 100%); justify-content: center; color: white; }
 section.divider h1 { font-size: 84px; color: white; font-weight: 600; text-shadow: 0 2px 12px rgba(0,0,0,0.6); border-left: 12px solid #e0218a; padding-left: 28px; }
 section.divider h3 { color: #f8dcec; text-shadow: 0 2px 8px rgba(0,0,0,0.6); padding-left: 40px; }
-section.title { font-size: 24px; }
-section.title h1 { font-size: 46px; font-weight: 600; color: #3b1a5c; margin-bottom: 0; }
-section.title h3 { color: #8a1257; margin-top: 4px; }
-.flow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 0.75em; margin-top: 10px; }
-.flow span { background: #f3e3ec; border: 1px solid #8a1257; border-radius: 6px; padding: 2px 8px; }
-.flow b { color: #8a1257; }
-.paper { font-family: 'Libre Baskerville', serif; background: #fffdf7; border: 1px solid #ddd; box-shadow: 0 3px 10px rgba(0,0,0,0.12); padding: 14px 20px; font-size: 0.82em; }
+.paper { font-family: 'Libre Baskerville', serif; background: #fffdf7; border: 1px solid #ddd; box-shadow: 0 3px 10px rgba(0,0,0,0.12); padding: 10px 18px; font-size: 0.8em; }
 .paper .hl { background: #ffe066; }
 .tag { display: inline-block; background: #8a1257; color: white; border-radius: 6px; padding: 2px 10px; font-size: 0.7em; }
+.tag.g { background: #2a7f62; }
 .num { display: inline-block; background: #8a1257; color: white; border-radius: 50%; width: 1.5em; height: 1.5em; text-align: center; line-height: 1.5em; font-size: 0.8em; margin-right: 6px; }
 .lvl { display: inline-block; border-radius: 5px; padding: 1px 8px; color: white; font-weight: 600; font-size: 0.85em; }
 .green { background: #2a7f62; } .amber { background: #c98a00; } .red { background: #b3261e; }
@@ -36,6 +31,8 @@ section.title h3 { color: #8a1257; margin-top: 4px; }
 .deal strong, .deal p, .deal li { color: white; }
 .price { font-size: 2.1em; font-weight: 700; line-height: 1.1; }
 .price s { font-size: 0.45em; opacity: 0.7; font-weight: 400; }
+.lesson { background: #e8f3ee; border-left: 6px solid #2a7f62; padding: 8px 16px; border-radius: 4px; }
+.step { font-weight: 700; color: #8a1257; margin: 10px 0 2px 0; }
 </style>
 
 <!-- _class: no-footer divider -->
@@ -47,12 +44,12 @@ section.divider { justify-content: flex-start; padding-top: 130px; }
 section.divider h1 { font-size: 60px; line-height: 1.15; margin-top: 20px; }
 p, em, code, strong { color: white !important; }
 code { background: rgba(255,255,255,0.15); }
-.logos { position: absolute; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; background: white; padding: 16px 70px; }
-.logos img { height: 46px; }
+.logos { position: absolute; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; background: white; padding: 16px 60px; }
+.logos img { height: 40px; }
 .meta { padding-left: 40px; }
 </style>
 
-<div class="logos"><img src="logos/congress_all.png"><img src="logos/uv_isp.png"></div>
+<div class="logos"><img src="logos/ica_ccr.png"><img src="logos/cegea.png"><img src="logos/upv.png"><img src="logos/uv_isp.png"></div>
 
 # Using AI in research, publishing and teaching
 
@@ -66,143 +63,127 @@ Image & Signal Processing group (ISP) · Universitat de València
 </div>
 
 <!--
-Timing plan (60'): Intro 5 · Tools 10 · Research + HO1/HO2 18 · Agents & my tools 7 · Publishing 6 · Data protection + HO3 8 · Teaching 3 · Wrap-up 3.
+Timing plan (60'): Intro 3 · 1 Chatbot to agent 8 · 2 Research 27 (HO1 5, live 1 4, econometrics 8, qualitative 4, writing 3, live 3 3) · 3 Teaching 6 · 4 Publishing 5 · 5 Data protection 7 (HO3) · Wrap-up 3.
+If short of time: skip live 3 and show its result only.
 -->
 
 ---
 
-<!-- _class: small -->
+<!-- _class: smaller -->
 
 ## Before we start
 
 <div class="columns">
 <div>
 
-**Get ready**
-1. Open an AI assistant on your laptop or phone (Claude, ChatGPT, Gemini…)
-2. Scan the QR to get the materials
+**To follow along**
+- **Minimum**: an AI assistant in your browser (Claude, ChatGPT, Gemini…)
+- **Better**: the [Claude](https://claude.com/download) desktop app (with Claude Code) or the [ChatGPT](https://chatgpt.com/download) desktop app (with Codex), or VS Code with their extensions; and [Miniconda](https://www.anaconda.com/download/success?reg=skipped-miniconda) for Python
+- Download the materials (QR) and open the folder `coop-project/`
 
-<br>
-
-**Three short hands-on blocks** (~5 min each)
-
-<span class="num">1</span> Is the AI's literature map your map?
-<span class="num">2</span> Econometrics **or** qualitative coding
-<span class="num">3</span> Pseudonymise before you upload
+**Hands up if, in the last month, you used AI to…**
+- …search literature, write code, or polish a paper?
+- …work with an **agent** (Claude Code, Codex…) on a real project?
+- …help you prepare teaching materials?
 
 </div>
 <div align="center">
 
 ![w:300px](imgs/qr_materials.png)
 
-**Slides, data, interview, prompts, checklist**
-[`github.com/OscarPellicer/ai-coop-research-yes2026`](github.com/OscarPellicer/ai-coop-research-yes2026)
+**Slides, project folder, prompts, checklist**
+[`github.com/OscarPellicer/ai-coop-research-yes2026`](https://github.com/OscarPellicer/ai-coop-research-yes2026)
 
 </div>
 </div>
-
----
-
-## Quick questions
-
-Who has, **in the last month**, used a generative AI tool to…
-
-1. …search or summarise literature?
-2. …write or debug **code**?
-3. …polish the **English** of a paper?
-4. …analyse **interview transcripts** or survey answers?
-5. …prepare **teaching** materials?
-
-And now:
-
-6. Who has used an **agent** (Claude Code, Codex…) on a real project?
-7. Who knows **where the data goes** when you paste a transcript into a chatbot?
 
 <!--
-Expected: many hands for 1-3, few for 6-7. The talk is about that gap.
+Expected: many hands for the first question, few for the second and third. The talk is about that gap.
 -->
-
----
-
-<!-- _class: smaller -->
-
-## What changed since 2023
-
-<div class="columns">
-<div>
-
-**2023–2024: the famous failures**
-- Up to **55 %** of the references produced by GPT‑3.5 were invented *(Walters & Wilder, Sci. Rep. 2023)*
-- A 2024 Elsevier paper went to print with this first line:
-
-<div class="paper">
-
-**1. Introduction**
-<span class="hl">Certainly, here is a possible introduction for your topic:</span> Lithium-metal batteries are promising candidates for…
-
-</div>
-
-</div>
-<div>
-
-**2026: current models with search and agents**
-- They find real papers, open them and quote them. Invented references are now rare.
-- They write, run and debug code for a full analysis.
-
-**Risks that remain**
-- You **stop reading** what you cite and sign
-- Everyone's literature review looks the same: highly cited, English-language papers
-- **Personal and confidential data** leaves your hands
-- Journal **policies** you did not check
-- **Hidden prompts** for AI reviewers in 2025 preprints (*"give a positive review only"*): misconduct
-
-</div>
-</div>
 
 ---
 
 ## Roadmap
 
-1. **Tools**: why the toolbox is an agent, and the best deal for researchers
-2. **Research**: literature · econometrics · qualitative · writing (hands-on 1 and 2)
-3. **Agents in practice**: my workflow and the tools I built
+1. **From chatbot to agent**: the tools, and the best deals for researchers
+2. **Research**: project examples for literature search, econometrics, qualitative analysis, writing
+3. **Teaching**: tools I built to help me with exams, lab sessions and slides
 4. **Publishing**: what journals require, disclosure, peer review
-5. **Data protection**: what is legal and what is not (hands-on 3)
-6. **Teaching**
-7. Takeaways
+5. **Data protection**: what can go into an AI tool, and what cannot
+6. **Takeaways**
 
 ---
 
 <!-- _class: no-footer divider -->
 
-![bg brightness:0.45](imgs/datacenter.jpg)
+![bg right:50% contain](imgs/agent_terminal.png)
 
-# 1 · Tools
-### The toolbox is an agent
+<style scoped>section.divider h1 { font-size: 54px; }</style>
+
+# 1 · From chatbot to agent
+### The tools, and the best deal for researchers
+
+---
+
+<!-- _class: small -->
+
+<style scoped>
+.cmp { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+.cmp h3 { margin: 0 0 4px 0; }
+.cmp img { display: block; width: 100%; max-height: 270px; object-fit: contain; margin: 0 auto; }
+.cmp ul { margin-top: 6px; }
+</style>
+
+## Chatbot and agent
+
+<div class="cmp">
+<div>
+
+### Chatbot: you are the bridge
+
+![](imgs/chatbot_flow.svg)
+
+- Sees only what you paste or upload
+- **Suggests** code; you run it and bring back the errors
+- Good for questions, explanations, short drafts
+
+</div>
+<div>
+
+### Agent: it works in your folder
+
+![](imgs/agent_loop.svg)
+
+- Reads your files, writes and **runs** code, fixes its errors
+- Leaves the results in the folder
+- **You approve** the risky steps
+
+</div>
+</div>
 
 ---
 
 <!-- _class: smaller -->
 
-## The toolbox in October 2026: one agent per provider
+## The tools in October 2026
 
 | | Anthropic | OpenAI | Google |
 |:--|:--|:--|:--|
 | **Top model** | Claude Opus 5.5 · Fable 5.1 | GPT-6 Astra | Gemini 4 Argon / Carbon |
-| **Agent** | **Claude Code** (and Cowork) | **Codex** | **Antigravity** |
-| **Where** | VS Code extension · desktop app · terminal | VS Code extension · desktop app · terminal | Own app (VS Code-based) · terminal |
-| **Cheapest access** | Pro (~20 €/month) · **free seat with the plan for scientists** | Free with daily limit · Plus for GPT-6 Astra | Free with Gemini 3.8 Flash · AI Pro/Ultra for Argon |
+| **Agent** | **Claude Code** | **Codex** | **Antigravity** |
+| **Where** | VS Code extension · desktop app · terminal | VS Code extension · desktop app · terminal | VS Code extension · own app (VS Code-based) · terminal |
+| **Cheapest access** | Pro (~20 €/month) · **free with the plan for scientists** | Free with small daily limit · Plus for GPT-6 Astra | Free with Gemini 3.8 Flash · AI Pro/Ultra for Argon |
 | **Data contract (DPA), no training** | Team / Enterprise / API | Business / Enterprise / API | Workspace Business / Vertex AI |
 
 <div class="columns">
 <div>
 
-**My recommendation**: Claude Code or Codex. You do not need the rest of the "AI tools for researchers" lists: an agent with web search covers literature search, coding, writing and document conversion.
+**My recommendation**: **Claude Code or Codex**. You do not need anything else. See next slide.
 
 </div>
 <div>
 
-**Local option** for sensitive data: Ollama or LM Studio (open models running on your laptop), and **noScribe** for interview transcription. The data never leaves your computer; the models are weaker.
+**Local option** for sensitive data: Ollama or LM Studio (open models running on your laptop), and **noScribe** for interview transcription. The data never leaves your computer; the models are weaker and slower.
 
 </div>
 </div>
@@ -215,7 +196,7 @@ Features and prices change every few months. Check before the talk.
 
 <!-- _class: smaller -->
 
-## The best deal available to you: Claude Team plan for scientists
+## The best deal: Claude Team plan for scientists
 
 <div class="columns">
 <div>
@@ -235,13 +216,13 @@ Features and prices change every few months. Check before the talk.
 <div>
 
 **How to get it**
-1. Your **PI** (or you, if you lead a group) applies at `claude.com/programs/team-plan-for-scientists`
+1. Your **PI** (or you, if you lead a group) applies at [claude.com/programs/team-plan-for-scientists](https://claude.com/programs/team-plan-for-scientists)
 2. Verify the affiliation and describe the research
-3. Review takes 5–7 working days; then the PI adds 1–25 members (postdocs, PhD students…)
+3. Review takes some minutes (perhaps days); then the PI adds 1–25 members (postdocs, PhD students…)
 
 **Why it matters for this talk**
 - It is a **Team** plan: a data processing agreement and **no training** on your data
-- Limited number of groups, approved on a rolling basis: **apply this week**
+- Limited number of groups, approved on a rolling basis: **apply already**
 
 </div>
 </div>
@@ -252,75 +233,32 @@ The page lists natural sciences, maths, CS, engineering "and related fields". So
 
 ---
 
-<!-- _class: small -->
+<!-- _class: smaller -->
 
-## How I work: every task is a project
-
-<div class="columns">
-<div>
-
-**A project = a folder**, opened in VS Code with the Claude Code extension, or in the Claude Code / Codex desktop app:
-
-```text
-coops-unemployment/
-├── CLAUDE.md      ← context and rules for the agent
-├── data/          ← raw data, never edited
-├── code/          ← R / Python / Stata scripts
-├── paper/         ← LaTeX or Markdown
-└── output/        ← tables and figures
-```
-
-Under **git**, so every change the agent makes can be reviewed and undone.
-
-</div>
-<div>
-
-**The agent works in a loop**
-
-<div class="flow"><span>plan</span><b>→</b><span>write code</span><b>→</b><span>run</span><b>→</b><span>read error</span><b>→</b><span>fix</span><b>→</b><span>output</span></div>
-
-<br>
-
-**A chatbot** answers in a window. You copy, paste, run and come back.
-
-**An agent** reads your files, writes and runs the code, sees the errors and fixes them, and leaves the results in the folder. You approve the risky steps.
-
-</div>
-</div>
-
----
-
-<!-- _class: small -->
-
-## Write everything in Markdown and LaTeX
+## Getting started, safely
 
 <div class="columns">
 <div>
 
-**Why plain text**
-- The agent reads and edits it reliably, line by line
-- **git** shows you exactly what changed
-- One source, many outputs: PDF, slides, web, Word if someone insists
+**Set up once**
+1. [VS Code](https://code.visualstudio.com) + the **Claude Code** or **Codex** extension (or their desktop apps)
+2. [Miniconda](https://www.anaconda.com/download/success?reg=skipped-miniconda): Python for the agent to run your analyses. I use Python; ask for R or Stata if you prefer
+3. [git](https://git-scm.com): every change the agent makes can be reviewed and undone
 
-**What I use**
-- Papers, reports, grant applications: **LaTeX**
-- Notes, documentation, slides (**Marp**), lab sessions: **Markdown**
+**Privacy**
+- **Personal** plans (Pro, Plus): consumer terms; check the training setting
+- **Team / Business / Enterprise** or API: no training by default, with a DPA
+- The agent can read **anything in the folder**, or in your whole computer if you allow it
 
 </div>
 <div>
 
-**The trick for forms and Word templates**
-
-1. Give the agent the template (`.docx`, `.pdf`)
-2. *"Convert this template to LaTeX, keeping the layout"*
-3. *"Fill it in with the information from `cv.md` and `project.md`"*
-4. Compile to PDF and submit
-
-<div class="info box">
-
-You keep one source of truth for your CV, projects and publications, and every new form takes minutes.
-
-</div>
+**Every time**
+1. Work in a **project folder** under git
+2. Ask it to **plan first**, then execute
+3. **Review every change** and re-run things yourself
+4. Keep personal data **out of** the folder unless your plan and your DPO allow it
+5. Write the rules in `CLAUDE.md` / `AGENTS.md`: your project, conventions, *"never drop observations without asking"*
 
 </div>
 </div>
@@ -332,97 +270,65 @@ You keep one source of truth for your CV, projects and publications, and every n
 ![bg brightness:0.4](imgs/library.jpg)
 
 # 2 · Research
-### Literature · econometrics · qualitative · writing
-
----
-
-<!-- _class: small -->
-
-## Literature: the agent finds the papers, you read them
-
-<div class="columns">
-<div>
-
-**Good uses**
-- Ask for a **map** of a field with web search or deep research, then read the key sources
-- Put the PDFs in the project folder and ask questions **about them**
-- Convert PDFs to Markdown first (e.g. **document2md**), so the agent reads tables and equations properly
-- Ask for counter-arguments, gaps and alternative theories
-
-</div>
-<div>
-
-**What to watch**
-- Search results favour highly cited, English-language work. **CIRIEC-España, REVESCO**, Latin American journals and ICA/Euricse reports are often missing
-- A summary of a paper is no substitute for reading it before you cite it
-- Two people asking the same question get two different maps
-
-</div>
-</div>
-
-<div class="info box">
-
-The question has moved from *"does this paper exist?"* to *"is this the right literature, and have I read it?"*
-
-</div>
+### One project, prompt by prompt
 
 ---
 
 <!-- _class: small hands-on -->
 
-## Hands-on 1 · Is the AI's literature map your map? <span class="tag">4 min</span>
+## Hands-on 1 · Is the AI's literature map your map? <span class="tag">5 min</span>
 
-Ask your assistant, **with web search on**:
+Use any assistant, **with web search on**.
+
+<p class="step">Prompt 1</p>
 
 ```text
-What are the 5 most important academic papers on [the counter-cyclical
-behaviour of worker cooperatives | member participation in housing
-cooperatives | the performance of agricultural cooperatives]?
-Give full references with DOI and a one-paragraph synthesis.
+What are the 5 most important academic papers on [the counter-cyclical behaviour of worker
+cooperatives | member participation in housing cooperatives | the performance of agricultural
+cooperatives]? Give full references with DOI and a one-paragraph synthesis.
 ```
 
-Then check:
+<p class="step">Prompt 2</p>
 
-1. Do the papers exist and do the DOIs resolve? (Probably yes.)
-2. Are they the ones **you** would choose? What is missing: Spanish-language journals, recent work, reports?
-3. Pick one paper you know well: does the synthesis describe it correctly?
-4. **Compare with your neighbour**: same five papers?
+```text
+Which important work is missing from this list? Look at Spanish-language journals
+(CIRIEC-España, REVESCO) and reports (ICA, Euricse, CICOPA). Which of the papers are open access?
+```
+
+<p class="step">Then check</p>
+
+Do the DOIs resolve? Are these the papers **you** would choose? Does the synthesis of a paper you know well get it right? **Compare with your neighbour**: same papers?
 
 <!--
-Typical outcome in 2026: all real, mostly the same English-language classics (Ben-Ner 1988, Pérotin 2006...), little from CIRIEC-España or REVESCO, and different lists between neighbours. Point: the agent is a starting point, you decide what the literature is.
+In 2023 up to 55% of the references produced by GPT-3.5 were invented (Walters & Wilder, Sci. Rep. 2023). In 2026 they are real. Typical outcome now: mostly the same English-language classics (Ben-Ner 1988, Pérotin 2006...), little from CIRIEC-España or REVESCO until you ask, and different lists between neighbours. The question has moved from "does this paper exist?" to "is this the right literature, and have I read it?"
 -->
 
 ---
 
-<!-- _class: small -->
+<!-- _class: smaller live -->
 
-## Econometrics: what to delegate and what to keep
+## Live 1 · From PDFs to a literature table <span class="tag g">4 min</span>
 
-<div class="columns">
-<div>
+**Setup**: `coop-project/papers/` has four open-access papers on cooperatives and the business cycle (APCE, J. of Labor and Society, CIRIEC-España, REVESCO). I open `coop-project/` in VS Code with Claude Code. Follow along with your agent, or upload the PDFs to your chatbot.
 
-**Delegate**
-- Cleaning, reshaping, merging, plots, LaTeX tables
-- Translating Stata, R and Python
-- Reading an error message and fixing it
-- Explaining output (*"what does this Hausman test say?"*)
-- Writing a **replication package** and its README
+<p class="step">Prompt 1</p>
 
-</div>
-<div>
+```text
+Convert every PDF in papers/ to Markdown with the document2md skill
+(github.com/OscarPellicer/document2md) and save them in papers/md/.
+If the LaTeX source of a paper is available (e.g. arXiv), use it instead.
+```
 
-**Keep**
-- **Identification**: the agent does not know your institutional setting
-- Every change to the sample: dropped NAs, recodes, outliers
-- Clustering, fixed-effects structure, functional form
-- Resisting the urge to re-run the model until it is significant
+<p class="step">Prompt 2</p>
 
-</div>
-</div>
+```text
+Write notes/literature.md with a table: research question, data, method and main finding of each
+paper, with the page of each claim. Which papers support the counter-cyclical hypothesis?
+```
 
-<div class="warning box">
+<div class="lesson">
 
-**Rule:** you must be able to explain **every line** of code in your paper to a referee.
+**Habit 1**: convert papers, reports and documentation to **Markdown** (or get the LaTeX source) before you start. The agent reads it faster and better, and so does `git`. Then **read the papers you cite**.
 
 </div>
 
@@ -430,95 +336,224 @@ Typical outcome in 2026: all real, mostly the same English-language classics (Be
 
 <!-- _class: smaller hands-on -->
 
-## Hands-on 2A · Econometrics with real data <span class="tag">5 min</span>
+## Hands-on 2 · Econometrics, prompt by prompt <span class="tag">5 min</span>
 
 <div class="columns">
 <div>
 
-**Data** (`handson/coops_panel.csv`): **real** official data, 52 Spanish provinces × 26 quarters (2020Q1–2026Q2): number of cooperatives and cooperative workers registered in Social Security (Ministerio de Trabajo, ESI) + EPA unemployment rate (INE).
+**Data** (`coop-project/data/coops_panel.csv`): **real** official data, 52 Spanish provinces × 26 quarters (2020Q1–2026Q2): cooperatives and cooperative workers registered in Social Security (Ministerio de Trabajo, ESI) and EPA unemployment (INE). I run it live in the agent; you, in your agent or chatbot.
 
-1. Upload the CSV and ask:
+<p class="step">Prompt 1 (agent only)</p>
+
+```text
+Set this folder up as a project: code/, output/,
+paper/, a CLAUDE.md and git. Use Python.
+Explore data/coops_panel.csv and report any
+problems. Never modify the raw data.
+```
+
+<p class="step">Prompt 2</p>
+
 ```text
 I want to test whether cooperatives grow more when
-unemployment is high (the "counter-cyclical" hypothesis).
-Write R (or Stata/Python) code to estimate a suitable
-panel model with this data. Explain each choice.
+unemployment is high (the "counter-cyclical"
+hypothesis). Write a Python script that estimates
+a suitable panel model. Explain each choice.
+Ask me before dropping any observation.
 ```
-2. Ask it to **criticise its own specification**: seasonality? time effects? reverse causality? clustering? **stocks vs. entries** (the literature is about *new* co-ops)?
-3. With your neighbour: same model? Same coefficients?
 
 </div>
 <div>
 
-![w:520px](imgs/coops_seasonality.png)
+![w:500px](imgs/coops_seasonality.png)
+
+<div class="lesson">
+
+**Habit 2**: one **project folder** per paper, with a `CLAUDE.md` and under **git**, so every change can be reviewed and undone.
+
+</div>
 
 </div>
 </div>
 
 <!--
-Point: two people, same data and question, different specifications. Producing a regression is easy; deciding which regression is still your job.
+Plan B: a screen recording of the same run.
+Point out: it plans, asks for permission to run code, hits an error and fixes it, asks before dropping data because we told it to.
+-->
+
+---
+
+<!-- _class: smaller hands-on -->
+
+## Hands-on 2 · Now make it criticise itself
+
+<div class="columns">
+<div>
+
+<p class="step">Prompt 3: seasonality and time effects</p>
+
+```text
+The data are quarterly and the chart shows a strong
+seasonal pattern. Add quarter and time fixed effects.
+What happens to the coefficient?
+```
+
+<p class="step">Prompt 4: stocks or entries?</p>
+
+```text
+The literature is about the entry of new co-ops,
+and this panel has stocks. Re-estimate with the
+net change in the number of cooperatives.
+```
+
+<p class="step">Prompt 5: inference and causality</p>
+
+```text
+Cluster the standard errors by province and explain
+why. Could causality run the other way? What can
+and can't this data tell us?
+```
+
+</div>
+<div>
+
+<p class="step">Prompt 6: output</p>
+
+```text
+Save one figure and one LaTeX table with all the
+specifications in output/. Write in CLAUDE.md
+what we decided and why.
+```
+
+<p class="step">Then</p>
+
+- Compare with your neighbour: same model? Same coefficients?
+- Read the code: what did it drop, recode or assume?
+
+<div class="warning box">
+
+**Rule:** you must be able to explain **every line** of code in your paper to a referee. Resist re-running the model until it is significant.
+
+</div>
+
+</div>
+</div>
+
+<!--
 With province FE only: -0.6% workers per pp of unemployment (p<0.01); with quarter FE: not significant.
+Point: producing a regression is easy; deciding which regression is still your job. Identification needs your knowledge of the institutional setting.
+-->
+
+---
+
+<!-- _class: smallest hands-on -->
+
+![bg left:25%](imgs/elevator.jpg)
+
+## Hands-on 3 · Thematic coding of a real interview <span class="tag">4 min</span>
+
+**Data** (`coop-project/interviews/interview_excerpt.md`): **real** oral history, ~800 words: Louis Schwing, 48 years in farmer-owned grain cooperatives in Illinois (Eastern Illinois University, 2016, CC BY-NC-ND).
+
+<p class="step">Prompt 1</p>
+
+```text
+Act as a qualitative researcher. Perform an inductive thematic analysis of this interview excerpt.
+Give 4-6 themes, a definition for each and 1-2 supporting quotes (verbatim, with line numbers).
+```
+
+<p class="step">Prompt 2</p>
+
+```text
+Now code it again using ONLY the codebook in interviews/README.md. Which passages contradict
+the themes you found?
+```
+
+<p class="step">Then check</p>
+
+Are the quotes verbatim? Same themes as your neighbour? Code a part yourself and **discuss the disagreements** with the AI.
+
+<div class="warning box">
+
+This interview is public and published with consent. **Your** interviews need the conditions in section 5 first, or a local tool (noScribe for transcription). Report the AI's role in Methods: tool, version, prompts.
+
+</div>
+
+<!--
+The model lacks context and positionality, smooths out tensions and minority voices, and two runs give two sets of codes. Answer key in interviews/README.md.
 -->
 
 ---
 
 <!-- _class: smaller -->
 
-![bg left:22%](imgs/recorder.jpg)
+<style scoped>
+.wl { display: grid; grid-template-columns: 1.1fr 1fr; gap: 30px; align-items: center; }
+.wl img { width: 100%; }
+</style>
 
-## Qualitative research: AI as a second reader
+## Writing: the human stays in the loop
 
-<div class="columns">
+<div class="wl">
 <div>
 
-**Useful**
-- **Local** transcription (noScribe/Whisper)
-- Translating interviews for co-authors (and checking the translation)
-- A first pass of coding **with your codebook**
-- Looking for disconfirming quotes
-- Summarising many documents: minutes, statutes, reports
+![](imgs/writing_loop.svg)
 
 </div>
 <div>
 
-**Careful**
-- Interpretation depends on **context and positionality**, which the model lacks
-- It smooths out tensions and minority voices, and can invent "representative" quotes
-- Two runs give two sets of codes: document it
-- **Report it in Methods**: tool, version, prompt, role
-- **Personal data**: see section 5
+```text
+Launch a review agent that reads paper/ as a
+referee for J. of Co-operative Organization and
+Management. It must not edit; it lists the
+problems by severity.
+```
+
+*"Apply 1, 3 and 4. Skip 2: I disagree, because…"*
+
+- You decide the **argument** and **what to cite**
+- Ask for **changes**, not for a new text: `git diff` shows what moved
+- No human in the loop looks like this (Elsevier, 2024):
+
+<div class="paper">
+
+**1. Introduction**
+<span class="hl">Certainly, here is a possible introduction for your topic:</span> Lithium-metal batteries are promising…
 
 </div>
+
 </div>
-
-<div class="info box">
-
-Good practice: code a subset yourself, ask the AI to code the same subset, and **discuss the disagreements**.
-
 </div>
 
 ---
 
-<!-- _class: smaller hands-on -->
+<!-- _class: smaller live -->
 
-![bg left:26%](imgs/elevator.jpg)
+## Live 3 · A Word template, filled in LaTeX <span class="tag g">3 min</span>
 
-## Hands-on 2B · Thematic coding of a real interview <span class="tag">5 min</span>
+**Setup**: `coop-project/proposal/` has the official Word template of the Spanish AEI *Proyectos de Generación de Conocimiento* 2025 call and `idea.md`, rough notes for a (fictional) proposal.
 
-**Data** (`handson/interview_excerpt.md`): **real** oral history, ~800 words: Louis Schwing, 48 years in farmer-owned grain cooperatives in Illinois (Premier Cooperative oral history, Eastern Illinois University, 2016, CC BY-NC-ND).
+<p class="step">Prompt 1</p>
 
-1. Paste the excerpt and ask:
 ```text
-Act as a qualitative researcher. Perform an inductive thematic analysis
-of this interview excerpt. Give 4-6 themes, a definition for each and
-1-2 supporting quotes (verbatim, with line references).
+Convert proposal/template.docx to LaTeX, keeping the layout as close as possible
+(without the logos). Compile it to PDF and show me the differences with the original.
 ```
-2. **Check the quotes**: are they verbatim?
-3. **Compare with your neighbour**: same themes? Now give both of you the **same codebook** and repeat.
 
-<div class="warning box">
+<p class="step">Prompt 2</p>
 
-This interview is public and was published with the interviewee's consent. Your own interviews need the conditions in section 5 before they go into any AI tool.
+```text
+Fill in sections 2.2 (justification and hypothesis) and 3.1 (objectives) from proposal/idea.md,
+notes/literature.md and the results in output/.
+Do not add anything that is not in those files; mark the gaps with TODO.
+```
+
+<p class="step">Prompt 3</p>
+
+*"Launch a review agent acting as an AEI evaluator."* And back to the writing loop.
+
+<div class="lesson">
+
+**Habit 3**: write in **LaTeX** (papers, proposals, forms) and **Markdown** (notes, documentation, slides). One source of truth, many outputs.
 
 </div>
 
@@ -526,100 +561,68 @@ This interview is public and was published with the interviewee's consent. Your 
 
 <!-- _class: small -->
 
-## Writing
+<style scoped>pre { font-size: 1.15em; }</style>
+
+## What we built along the way
 
 <div class="columns">
 <div>
 
-**Good uses**
-- **Language editing** for non-native English speakers (most of us)
-- *"Act as Reviewer 2 for this paper"* on **your own** draft
-- Shortening an abstract to 150 words, cover letters, response-to-reviewers drafts
-- Checking consistency between numbers in the text and in the tables
+```text
+coop-project/
+├── CLAUDE.md     ← context, rules, decisions
+├── papers/       ← PDFs
+│   └── md/       ← the same papers, in Markdown
+├── notes/        ← literature table
+├── data/         ← raw data, never edited
+├── interviews/   ← (personal data: see section 5)
+├── code/         ← Python scripts
+├── output/       ← tables and figures
+└── proposal/     ← LaTeX, compiled to PDF
+```
+
+Opened in **VS Code + Claude Code**, or in the Claude Code / Codex desktop app. Under **git**, optionally synced with GitHub (with `data/` in `.gitignore`).
 
 </div>
 <div>
 
-**Keep for yourself**
-- The argument and the interpretation of the results
-- The choice of what to cite (see hands-on 1)
-- Reviewers' and co-authors' **confidential** material stays out of consumer tools
+**Three habits**
+1. Convert everything to **Markdown** first
+2. One **project folder** per task, with `CLAUDE.md` and git
+3. Write in **LaTeX and Markdown**
+
+**Skills**: a *skill* is a folder of instructions (and scripts) that teaches the agent a task once. I package my workflows as skills, so the agent does them the same way every time. Next section: some of them.
 
 </div>
-</div>
-
-<div class="info box">
-
-**AI detectors are unreliable** and biased against non-native writers: one study found that more than 60 % of TOEFL essays were flagged as AI-written *(Liang et al., Patterns 2023)*. Do not use them on your students either.
-
 </div>
 
 ---
 
 <!-- _class: no-footer divider -->
 
-![bg right:50% contain](imgs/agent_terminal.png)
+![bg brightness:0.4](imgs/lecture.jpg)
 
-# 3 · Agents
-### My workflow and the tools I built
-
----
-
-<!-- _class: smaller -->
-
-## What I use Claude Code for every day
-
-<div class="columns">
-<div>
-
-**Research**
-- From messy Excel files to a clean, documented dataset
-- Old do-files to R/Python, **replication packages**
-- Tables and figures straight into the LaTeX paper
-- Reading a folder of PDFs and building an extraction table (which I check)
-
-**Admin**
-- Filling in forms and templates via LaTeX
-- CVs and reports from a single Markdown source
-
-</div>
-<div>
-
-**Teaching**
-- Lab sessions, exams, rubrics, these slides
-- Correcting exams (see next slide)
-
-**Skills**
-A *skill* is a folder of instructions (and scripts) that teaches the agent a task once. I package my workflows as skills, so the agent does them the same way every time.
-
-</div>
-</div>
-
-<div class="info box">
-
-**Getting started**: install VS Code and the Claude Code (or Codex) extension, open a **copy** of one real project, and ask it to explain the project to you. Then ask for one small task.
-
-</div>
+# 3 · Teaching
+### And the tools I built for it
 
 ---
 
-<!-- _class: smaller -->
+<!-- _class: small -->
 
-## My open-source tools (all agent-ready)
+## [ptestgen](https://github.com/OscarPellicer/ptestgen) + pexams: from course material to marks
 
-| Tool | What it does |
-|:--|:--|
-| **[ptestgen](https://github.com/OscarPellicer/ptestgen)** | From course material to marks: writes questions in Markdown, exports printable exams (several shuffled versions) or Moodle/Wooclap quizzes, reads the scans, grades open answers with an LLM, gives statistics per question |
-| **[md2ipynb](https://github.com/OscarPellicer/md2ipynb)** | Edit Jupyter notebooks as Markdown. One Markdown source for a lab session, rendered into several languages and into **student and teacher** versions |
-| **[document2md](https://github.com/OscarPellicer/document2md)** | PDF, Word, PowerPoint, Excel and OpenDocument to clean Markdown, keeping tables, images and equations |
-| **[marp_template](https://github.com/OscarPellicer/marp_template)** | The template behind these slides: Markdown slides with VS Code + Marp |
-| **[pptx2marp](https://github.com/OscarPellicer/pptx2marp)** | Your old PowerPoint decks to Marp (or Beamer), so the agent can edit them |
+![right h:350px](imgs/tools/pexams_scan_top.png)
 
-Install as a skill, then ask in plain words: *"Make a 10-minute quiz with 3 open questions about this lab notebook, for 30 students."*
+- Questions written in **Markdown** from your course material
+- Printable exams in several shuffled versions, or **Moodle / Wooclap** quizzes
+- Reads the **scans**, marks multiple choice, statistics per question
+- Grades open answers and lab notebooks with an LLM and a **rubric**, with feedback for each student
+
+<br>
 
 <div class="warning box">
 
-LLM grading of open answers: I review every grade, and students know how they are graded. Under the AI Act, AI used to **evaluate learning outcomes** is high-risk (Annex III); those obligations apply from **2 Dec 2027**.
+I review every grade, and students know how they are graded. Under the AI Act, AI used to **evaluate learning outcomes** is high-risk (Annex III), from **2 Dec 2027**.
 
 </div>
 
@@ -627,67 +630,137 @@ LLM grading of open answers: I review every grade, and students know how they ar
 
 <!-- _class: small -->
 
-## Using an agent safely
+<style scoped>
+.tool { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; }
+.tool img { width: 100%; }
+</style>
 
-<div class="columns">
+## [md2ipynb](https://github.com/OscarPellicer/md2ipynb): lab sessions from one Markdown file
+
+<div class="tool">
 <div>
 
-**How to start**
-1. Work on a **copy** or a **git** repo
-2. Ask it to **plan first**, then execute
-3. **Review every change** (diffs) and re-run things yourself
-4. Keep personal data **out of** the folder unless your plan and your DPO allow it
-5. Write a short `CLAUDE.md` / `AGENTS.md`: your project, conventions, rules (*"never drop observations without asking"*)
+![](imgs/tools/md2ipynb.png)
 
 </div>
 <div>
 
-**Privacy**
-- On a **personal** plan (Pro, Plus) consumer data terms apply: check the training setting
-- On **Team / Business / Enterprise** or the API: no training by default, with a DPA
-- The agent sends only the files it reads, and **it can read anything in the folder**
+- Agents edit Markdown far better than `.ipynb` JSON
+- **One source** for each lab session, with tags for language and for solutions
+- Rendered into **student and teacher** versions, in Spanish, Valencian and English
+- Add an end-of-session exam with ptestgen
 
 </div>
-</div>
-
-<div class="warning box">
-
-An agent **runs code on your machine**. Read what it wants to do before you approve it.
-
 </div>
 
 ---
 
 <!-- _class: small -->
 
-## Live demo (3 min) · VS Code + Claude Code
+<style scoped>
+.tool { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; }
+.tool img { width: 100%; }
+</style>
 
-<div class="columns">
+## [document2md](https://github.com/OscarPellicer/document2md): any document to Markdown
+
+<div class="tool">
 <div>
 
-**Setup**: a folder with `coops_panel.csv` and its README, opened in VS Code.
+![](imgs/tools/document2md.png)
+
+</div>
+<div>
+
+- PDF, Word, PowerPoint, Excel and OpenDocument to clean Markdown
+- Keeps **tables, images and equations**; OCR for scanned PDFs
+- Papers (live 1), regulations, old course notes, the syllabus you inherited
+- Once in Markdown, the agent can turn them into slides, exercises or exams
+
+</div>
+</div>
+
+---
+
+<!-- _class: small -->
+
+<style scoped>
+.tool { display: grid; grid-template-columns: 1.45fr 1fr; gap: 28px; align-items: center; }
+.tool img { width: 100%; border: 1px solid #ccc; }
+</style>
+
+## [marp_template](https://github.com/OscarPellicer/marp_template): slides in Markdown
+
+<div class="tool">
+<div>
+
+![](imgs/tools/marp_editor.png)
+
+</div>
+<div>
+
+- These slides: Markdown in VS Code, with live preview, exported to PDF or PowerPoint
+- The agent writes and edits them like any text file
+- Case studies in minutes:
 
 ```text
-Explore coops_panel.csv and report any problems.
-Then estimate a two-way fixed-effects model of
-cooperative employment on lagged unemployment,
-with SEs clustered by province, plus one
-robustness check. Produce one figure, a LaTeX
-table and report.md with the main limitations.
-Use a single R script. Ask me before dropping
-any observation.
+Write a 2-page case of a fictional agricultural
+co-op facing a merger vote, with 5 discussion
+questions and 4 slides to present it.
 ```
 
 </div>
+</div>
+
+---
+
+<!-- _class: small -->
+
+<style scoped>
+.tool { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; }
+.tool img { width: 100%; }
+</style>
+
+## [pptx2marp](https://github.com/OscarPellicer/pptx2marp): your old decks, editable again
+
+<div class="tool">
 <div>
 
-**What to point out while it works**
-- It **plans**, then asks for permission to run code
-- It hits an error and **fixes it**
-- It **asks** before dropping data, because we told it to
-- The final report: is the interpretation right? **You** decide
+![](imgs/tools/pptx2marp.png)
 
-**Plan B**: a screen recording of the same run, in case Wi-Fi fails.
+</div>
+<div>
+
+- PowerPoint to Marp (or Beamer), keeping images and notes
+- Then ask the agent: *"update the data to 2026, translate to English, add two exercises"*
+- Check every fact and number it adds
+
+</div>
+</div>
+
+---
+
+<!-- _class: small -->
+
+## Your students use AI too
+
+<div class="columns">
+<div>
+
+- Assume they use it. Bans cannot be enforced
+- Assessment that holds up: **oral defence**, in-class work, process (drafts, logs), **their own fieldwork**
+- Or build it in: *"use AI, attach the conversation, critique its answer"*
+- Teach them to **check sources** (hands-on 1 works well in class)
+- Write the rules **in the syllabus**, per assignment
+
+</div>
+<div>
+
+<div class="info box">
+
+**AI detectors are unreliable** and biased against non-native writers: more than 60 % of TOEFL essays by non-native speakers were flagged as AI-written *(Liang et al., Patterns 2023)*. Do not use them to accuse students.
+
+</div>
 
 </div>
 </div>
@@ -705,7 +778,7 @@ any observation.
 
 <!-- _class: smallest -->
 
-## What publishers say (consensus, 2023–2026)
+## What publishers say (October 2026)
 
 <div class="columns">
 <div>
@@ -714,20 +787,20 @@ any observation.
 - AI **cannot be an author**: it cannot take responsibility
 - **You** are accountable for everything, including errors made by the AI
 - **Disclose** substantive use (how depends on the journal)
-- **No AI-generated images or figures** in most journals
+- **No AI-generated photos** or evidential images (scans, photographs)
 - **Reviewers and editors must not upload manuscripts** to AI tools
 
-**Differences between publishers**
-- Where to disclose: dedicated statement (Elsevier), Methods section (Springer Nature), acknowledgements…
-- Whether **language editing** must be disclosed (often it need not be)
+**Figures as code are fine**: diagrams and charts the AI writes as code ([TikZ](https://tikz.dev), [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG), [Mermaid](https://mermaid.js.org), [draw.io](https://www.drawio.com) XML, [matplotlib](https://matplotlib.org)) can be read, checked and edited element by element. Elsevier, Wiley and Springer Nature allow them, **with disclosure** (usually in the caption).
 
 </div>
 <div>
 
 **Check your journal**, for example:
-- *J. of Co-operative Organization and Management*: Elsevier
-- *Annals of Public and Cooperative Economics*: Wiley
-- *CIRIEC-España*, *REVESCO*: read their author guidelines; if they say nothing, disclose anyway
+- [*J. of Co-operative Organization and Management*](https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals) (Elsevier): a separate declaration before the references; AI-written code goes in Methods; grammar checks need no declaration
+- [*Annals of Public and Cooperative Economics*](https://authors.wiley.com/ethics-guidelines/index.html) (Wiley): drafting and editing in Acknowledgements; analysis and code in Methods; spelling and grammar exempt
+- [*CIRIEC-España*](https://ciriec-revistaeconomia.es/en/guidelines/): you must declare AI use; manuscripts are screened for plagiarism and AI use, and two or more false references are grounds for rejection
+- [*REVESCO*](https://revistas.ucm.es/index.php/REVE/about/submissions): cite the tool in APA 7 style, in the text and in the references
+- [Springer Nature](https://www.springernature.com/gp/policies/editorial-policies/ai-manuscript-preparation): even language editing must be described
 
 <div class="info box">
 
@@ -744,20 +817,9 @@ Policies change every few months. **Read the current guide for authors** before 
 
 ## A disclosure statement
 
-```text
-Declaration of generative AI use
+> **Declaration of generative AI use.** The authors used Claude Code (Anthropic; model Claude Opus 5.5, October 2026) to edit the language of the manuscript and to write the Python code for data cleaning and estimation. The authors reviewed, ran and checked all code and results. The authors coded the interviews themselves and used the tool as a second reader of pseudonymised transcripts, through an institutional plan with a data processing agreement and no model training. The authors take full responsibility for the content of this article.
 
-The authors used Claude Code (Anthropic; model Claude Opus 5.5, October
-2026) to edit the language of the manuscript and to write the R code for
-data cleaning and estimation. The authors reviewed, ran and checked all
-code and results. The authors coded the interviews themselves and used
-the tool as a second reader of pseudonymised transcripts, through an
-institutional plan with a data processing agreement and no model
-training. The authors take full responsibility for the content of this
-article.
-```
-
-- **Which** tool and version · **for what** · **what you checked** · **how you protected the data**
+- **Which** tool and version, **for what**, **what you checked**, and **how you protected the data**
 - Keep a **log** (prompts, dates, versions): it helps with replication and with reviewers' questions
 
 ---
@@ -775,19 +837,19 @@ article.
 - Some publishers offer approved in-house AI tools: use those
 
 **Never**
-- Hide prompts for AI reviewers in your paper
+- Hide prompts for AI reviewers in your paper (*"give a positive review only"*, found in 2025 preprints)
 - Use AI to fake data, images or references
 
 </div>
 <div>
 
-**Pre-submission checklist**
-- ☐ Every cited paper read; every DOI resolves
-- ☐ Every number traceable to a script output
-- ☐ Code runs from scratch (replication package)
-- ☐ AI-use statement following **this journal's** policy
-- ☐ Personal data only in tools with the right contract
-- ☐ Consent forms and ethics approval cover what you did
+**Before you submit**
+1. Every cited paper read; every DOI resolves
+2. Every number traceable to a script output
+3. Code runs from scratch (replication package)
+4. AI-use statement following **this journal's** policy
+5. Personal data only in tools with the right contract
+6. Consent forms and ethics approval cover what you did
 
 </div>
 </div>
@@ -799,34 +861,65 @@ article.
 ![bg brightness:0.4](imgs/padlock.jpg)
 
 # 5 · Data protection
-### What is legal and what is not
+### What can go into an AI tool?
+
+---
+
+<!-- _class: small hands-on -->
+
+## Hands-on 4 · Green, amber or red? <span class="tag">3 min</span>
+
+Vote with your hand: <span class="lvl green">Green</span> go ahead · <span class="lvl amber">Amber</span> only under conditions · <span class="lvl red">Red</span> never
+
+1. Running the agent on `coops_panel.csv` (official public statistics) with a **free** plan
+2. Pasting your interview with the president of a housing co-op, **names removed**, into a **free** chatbot
+3. The same transcript, pseudonymised, on the **Team plan for scientists**; the consent form mentions AI and your DPO agreed
+4. Uploading a manuscript **you are reviewing** to check its statistics
+5. Transcribing your interviews with **noScribe** on your laptop
+6. A survey of co-op members that asks about **trade-union membership**, on a Team plan, without telling participants
+7. Your own draft paper (no personal data) on a **personal** Pro plan
+
+<!--
+Answers on the next slide. Let people argue for 1-2 minutes, especially about 2 and 3.
+-->
 
 ---
 
 <!-- _class: smaller -->
 
-## Your interviews are personal data (GDPR)
+## The answers
+
+| | | Why |
+|:--:|:--:|:--|
+| 1 | <span class="lvl green">Green</span> | Public, non-personal data: any tool |
+| 2 | <span class="lvl red">Red</span> | Still personal data: *"the president of a 12-member housing co-op in Benimaclet"* identifies one person. No contract with the provider |
+| 3 | <span class="lvl amber">Amber</span> | Fine, **if** all the conditions on the next slide hold. Pseudonymised data are still personal data |
+| 4 | <span class="lvl red">Red</span> | The manuscript is confidential, whatever the plan. Use the publisher's approved tool, if any |
+| 5 | <span class="lvl green">Green</span> | The data never leave your computer |
+| 6 | <span class="lvl red">Red</span> | Trade-union membership is a **special category** (Art. 9), and participants were not informed |
+| 7 | <span class="lvl green">Green</span> | Your own text with no personal data. Turn off training if you prefer |
+
+**From your next study on**: talk to your **DPO** and ethics committee **before** collecting data, and say it in the **consent form**: *"Transcripts may be processed with AI tools under a data processing agreement that excludes use for model training."* Pseudonymise first anyway, and keep the key offline.
+
+---
+
+<!-- _class: smaller -->
+
+## When can identifiable data go into an AI tool? (GDPR)
 
 <div class="columns">
 <div>
 
-- **Names, voices, e-mails**: obviously
-- **Indirect identifiers**: *"the president of a 12-member housing co-op in Benimaclet"* identifies one person
-- **Special categories** (Art. 9): **trade-union membership**, political opinions, health, religion. They come up often in cooperative research.
-- **Pseudonymised data are still personal data**; only truly anonymous data fall outside the GDPR
+**All of this must hold**
+1. A **legal basis** (consent, or public-interest research)
+2. For special categories (union membership, political opinions, health, religion), an **Art. 9 exception**: explicit consent, or research with safeguards
+3. A **processor contract (DPA)**: Team / Enterprise / API plans
+4. Transfers outside the EU covered (adequacy decision or standard clauses)
+5. Participants **informed**; a **DPIA** if the risk is high
+6. Your **DPO** and ethics committee agree
 
 </div>
 <div>
-
-**Can identifiable data go into an AI tool?** Yes, if all of this holds:
-- A **legal basis** (consent, or public-interest research) and, for special categories, an **Art. 9 exception** (explicit consent, or research with safeguards)
-- A **processor contract (DPA)**: Team/Enterprise/API plans
-- Transfers outside the EU covered (adequacy decision or standard clauses)
-- Participants **informed**; a **DPIA** if the risk is high
-- Your **DPO** and ethics committee agree
-
-</div>
-</div>
 
 <div class="error box">
 
@@ -834,101 +927,10 @@ A free or personal plan meets none of these conditions. Uploading identifiable i
 
 </div>
 
----
-
-<!-- _class: smaller -->
-
-## A simple traffic light
-
-| | Data | Where |
-|:--:|:--|:--|
-| <span class="lvl green">Green</span> | Public data, published papers, your own text, code without data | Any tool |
-| <span class="lvl amber">Amber</span> | Pseudonymised or identifiable transcripts, unpublished manuscripts, grant proposals | Team / Enterprise / API plan with a DPA, under the conditions on the previous slide |
-| <span class="lvl red">Red</span> | Any personal data in a **free or personal** plan · **others'** manuscripts under review (confidentiality) | Nowhere. Use a local tool (noScribe, Ollama) or an institutional plan |
-
-**From your next study on**
-- Talk to your **Data Protection Officer** and ethics committee **before** collecting data
-- Say it in the **consent form**: *"Transcripts may be processed with AI tools under a data processing agreement that excludes use for model training."*
-- **Pseudonymise first** anyway (data minimisation). Keep the key file offline.
-
----
-
-<!-- _class: small hands-on -->
-
-## Hands-on 3 · Pseudonymise, then disclose <span class="tag">5 min</span>
-
-<div class="columns">
-<div>
-
-**Part A (3 min)**: take the interview excerpt from hands-on 2B and, **without AI**, mark everything that could identify someone:
-- names, places, dates, organisations, roles, unusual events…
-
-Compare with your neighbour. **Who found more?**
-
-*Bonus: ask the assistant to do the same on this public text and see what it misses.*
-
-</div>
-<div>
-
-**Part B (2 min)**: write the **AI-use statement** for the paper you are working on now:
-- which tool, for what
-- what you checked
-- how you protected the data
-
-Would you be comfortable if your **supervisor** or a **referee** read it?
-
-</div>
-</div>
-
-<!--
-Answer key in handson/interview_README.md. People usually miss indirect identifiers (job + place + date).
--->
-
----
-
-<!-- _class: small -->
-
-## And the EU AI Act?
-
-- Since **2 Feb 2025**, organisations that deploy AI (universities included) must ensure the **AI literacy** of their staff (Art. 4). Sessions like this one are part of that.
-- **Research exemption**: AI systems developed **only** for scientific research are outside the scope (Art. 2(6)). Using ChatGPT or Claude in your research does not make you the developer of an AI system.
-- **Education**: AI used to evaluate learning outcomes or to decide admissions is **high-risk** (Annex III). After the 2026 Digital Omnibus, those obligations apply from **2 December 2027**.
-- In daily research, what matters most is still **GDPR + your contract with the provider + research ethics**.
-
----
-
-<!-- _class: no-footer divider -->
-
-![bg brightness:0.4](imgs/lecture.jpg)
-
-# 6 · Teaching
-### With AI, and for students who use AI
-
----
-
-<!-- _class: small -->
-
-## Teaching with AI, and teaching students who use AI
-
-<div class="columns">
-<div>
-
-**For you (saves hours)**
-- Case studies: *"a fictional agricultural co-op facing a merger vote; 2 pages + 5 discussion questions"*
-- Lab sessions in one Markdown source, in several languages, with student and teacher versions (**md2ipynb**)
-- Exams in several versions, corrected from the scans (**ptestgen**), rubrics, feedback drafts
-- Slides in Markdown (**Marp**)
-- Check every fact and number; student work with names only in tools with a DPA
-
-</div>
-<div>
-
-**For your students**
-- Assume they use it. Bans cannot be enforced and detectors do not work
-- Assessment that holds up: **oral defence**, in-class work, process (drafts, logs), **their own fieldwork**
-- Or build it in: *"use AI, attach the conversation, critique its answer"*
-- Teach them to **check sources** (hands-on 1 works well in class)
-- Write the rules **in the syllabus**
+**And the EU AI Act?**
+- **AI literacy** of staff is required since Feb 2025 (Art. 4): sessions like this one
+- AI systems built **only** for research are exempt (Art. 2(6)); using Claude or ChatGPT does not make you a provider
+- Evaluating students with AI is **high-risk** from Dec 2027
 
 </div>
 </div>
@@ -940,7 +942,7 @@ Answer key in handson/interview_README.md. People usually miss indirect identifi
 ## Five takeaways
 
 1. **Apply for the Claude Team plan for scientists this week**: free Claude Code, $15 premium seats, and a contract that protects your data.
-2. **Work in projects**: one folder per paper or course, in VS Code or the agent's app, under git, in Markdown and LaTeX.
+2. **Work in projects**: one folder per paper or course, in VS Code or the agent's app, under git, with everything in Markdown and LaTeX.
 3. **Read what you cite and check what you run**: the agent does the work, you sign it.
 4. **Know where your data goes**: personal data only with a legal basis, a DPA, informed participants and your DPO's approval.
 5. **Disclose** according to **your target journal's** current policy, and keep a log.
@@ -970,11 +972,11 @@ code { background: rgba(255,255,255,0.15); }
 
 </div>
 
-[`github.com/OscarPellicer/ai-coop-research-yes2026`](github.com/OscarPellicer/ai-coop-research-yes2026)
+[`github.com/OscarPellicer/ai-coop-research-yes2026`](https://github.com/OscarPellicer/ai-coop-research-yes2026)
 
 ---
 
-<!-- _class: small -->
+<!-- _class: smaller -->
 
 ## References
 
@@ -982,19 +984,18 @@ code { background: rgba(255,255,255,0.15); }
 
 - Anthropic (2026). *Claude Team plan for scientists*. https://claude.com/programs/team-plan-for-scientists
 - COPE (2023). *Authorship and AI tools*. COPE position statement.
-- Elsevier. *Generative AI policies for journals*. Springer Nature. *Artificial Intelligence (AI)* editorial policy. Wiley. *Using AI tools in your writing*. (Check current versions.)
+- Elsevier (2026). *Generative AI policies for journals* (updated June 2026). Wiley (2026). *Ethics guidelines: AI* (updated July 2026). Springer Nature. *AI in manuscript preparation*. ICMJE (2026). *Recommendations*, Section V. CIRIEC-España and REVESCO author guidelines (accessed Oct 2026).
 - Liang, W., Yuksekgonul, M., Mao, Y., Wu, E., & Zou, J. (2023). GPT detectors are biased against non-native English writers. *Patterns*, 4(7).
 - Walters, W. H., & Wilder, E. I. (2023). Fabrication and errors in the bibliographic citations generated by ChatGPT. *Scientific Reports*, 13, 14045.
 - Regulation (EU) 2016/679 (GDPR), Arts. 4, 6, 9, 28, 35, 44–49, 89. Regulation (EU) 2024/1689 (AI Act), Arts. 2(6), 4, Annex III; as amended by the Digital Omnibus on AI (2026).
 - Ben-Ner, A. (1988). The life cycle of worker-owned firms in market economies. *J. of Economic Behavior & Organization*, 10(3).
 - Pérotin, V. (2006). Entry, exit, and the business cycle: Are cooperatives different? *J. of Comparative Economics*, 34(2).
-- Tools: Claude Code https://claude.com/claude-code · Codex https://openai.com/codex · noScribe https://github.com/kaixxx/noScribe · my tools: https://github.com/OscarPellicer
+- Papers in `coop-project/papers/`: Magne & Pérotin (2026), *APCE*, doi:10.1111/apce.70046 · Reuten (2023), *J. of Labor and Society*, 26(3), doi:10.1163/24714607-bja10080 · Sala Ríos, Torres Solé & Farré Perdiguer (2015), *CIRIEC-España*, 83, doi:10.7203/CIRIEC-E.83.13421 · Cantarero, González-Loureiro & Puig (2017), *REVESCO*, 125, doi:10.5209/REVE.56133
+- Tools: Claude Code https://claude.com/claude-code · Codex https://openai.com/codex · noScribe https://github.com/kaixxx/noScribe · Miniconda https://www.anaconda.com/download · my tools: https://github.com/OscarPellicer
 
 </div>
 
 ---
-
-<!-- _class: smalle -->
 
 ## Image credits
 
@@ -1002,14 +1003,12 @@ code { background: rgba(255,255,255,0.15); }
 
 Photos from Wikimedia Commons (no changes other than cropping/darkening):
 - Title & closing: *Ciudad de las Artes y las Ciencias* by Elemaki, mod. Alvaro qc, CC BY-SA 3.0
-- Tools: *BalticServers data center* by BalticServers.com, CC BY-SA 3.0
 - Research: *Graz University-Library reading-room* by Dr. Marcus Gossler, CC BY-SA 3.0
-- Qualitative: *Got Audio?* by Alan Levine, CC BY 2.0
-- Hands-on 2B: *Palmer elevator 2026-07-03* by Visviva, CC BY-SA 4.0
+- Hands-on 3: *Palmer elevator 2026-07-03* by Visviva, CC BY-SA 4.0
+- Teaching: *Curtis Lecture Halls interior view1 empty class* by Theonlysilentbob, CC BY-SA 3.0
 - Publishing: *The Historic Printing Press in Petah Tikva* by Yarkon River 54, CC0
 - Data protection: *Solex 99 30 padlock with keys* by Trougnouf, CC BY 4.0
-- Teaching: *Curtis Lecture Halls interior view1 empty class* by Theonlysilentbob, CC BY-SA 3.0
 
-Chart: own elaboration with data from Ministerio de Trabajo y Economía Social (ESI). Agent terminal: illustrative mock-up. Logos belong to their respective institutions.
+Chart: own elaboration with data from Ministerio de Trabajo y Economía Social (ESI). Diagrams and terminal: own illustrations (the terminal is a mock-up). Tool images: from the tools' repositories, or own mock-ups. Logos belong to their respective institutions.
 
 </div>
