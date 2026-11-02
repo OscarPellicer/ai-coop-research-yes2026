@@ -1,6 +1,6 @@
 # Using AI in research, publishing and teaching
 
-Materials for the session at the **Young and Emerging Scholars (YES) Workshop**, ICA CCR Europe Research Conference 2026 (Valencia, 3 November 2026).
+Materials for the session at the **ICA CCR-YES Workshop** *AI and the Future of Cooperative Research* (Young and Emerging Scholars), ICA CCR Europe Research Conference 2026 (Valencia, 3 November 2026).
 
 Oscar José Pellicer Valero · Universitat de València · Oscar.Pellicer@uv.es
 

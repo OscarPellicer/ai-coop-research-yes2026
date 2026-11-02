@@ -3,7 +3,7 @@ marp: true
 theme: extra
 paginate: true
 html: true
-footer: ICA CCR Europe 2026 · YES Workshop
+footer: ICA CCR-YES Workshop 2026
 ---
 
 <!-- Logos: ICA CCR, CEGEA, UPV, UV/ISP -->
@@ -57,11 +57,12 @@ code { background: rgba(255,255,255,0.15); }
 **Oscar José Pellicer Valero** · `Oscar.Pellicer@uv.es`
 Image & Signal Processing group (ISP) · Universitat de València
 
-*YES Workshop · ICA CCR Europe 2026 · Valencia, 3 November 2026*
+*ICA CCR-YES Workshop · AI and the Future of Cooperative Research*<br>*Valencia, 3 November 2026*
 
 </div>
 
 <!--
+Opening: the programme lists this slot as "The AI Research Toolkit: Essential Tools to Accelerate Your Academic Workflow" (Prof. Jordi Linares). Say that I am replacing him, with a talk on the same theme.
 Timing plan (60'): Intro 3 · 1 Chatbot to agent 8 · 2 Research 23 (live 1 5, live 2 4, live 3 econometrics 8, live 4 writing 3, live 5 3; optional qualitative +4) · 3 Teaching 6 · 4 Publishing 5 · 5 Data protection 7 (HO3) · Wrap-up 3.
 If short of time: skip the optional thematic-coding slide (attendees can try it at home), then skip live 5 and show its result only.
 -->
